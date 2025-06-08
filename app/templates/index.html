@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/static/css/styles-index.css">
         <title>
             Container Damage Detection
         </title>
     </head>
     <body>
-        <h1>Upload Container Image</h1>
-        <form action="/detect_damage" method="post" enctype="multipart/form-data">
-            <input type="file" name="file" required>
-            <br><br>
-            <input type="submit" value="Detect Damage">
-            </form>
-        </form>
+        <div class="container">
+            <div class="left">
+                <h1>Container Damage Detection</h1>
+            </div>
+            <div class="right">
+                <div class="form-box">
+                <form action="/detect_damage" method="post" enctype="multipart/form-data">
+                    <label for="container_id">Shipping Container ID:</label>
+                    <input type="text" id="container_id" name="container_id" required>
+                    <label for="file">Upload the container image to detect damage:</label>
+                    <input type="file" name="file" required>
+                    <input type="submit" value="Submit">
+                </form>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

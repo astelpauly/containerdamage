@@ -2,16 +2,22 @@
 <html>
 <head>
     <title>Container Damage Detection - Result</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles-result.css">
 </head>
 <body>
     <h1>Detection Result</h1>
-    <h2>Original Image:</h2>
-    <img src="{{ original_url }}" width="400">
-
-    <h2>Predicted Image:</h2>
-    <img src="{{ predicted_url }}" width="400">
-
-    <br><br>
-    <a href="/">Upload another image</a>
+    <div class="image-container">
+        <div class="image-box">
+            <img src="{{original_url}}" alt="Uploaded Image">
+            <div class="image-label">Uploaded Image</div>
+        </div>
+        <div class="image-box">
+        <img src="{{ predicted_url }}" alt="Predicted Image">
+        <div class="image-label">Detected Image</div>
+    </div>
+    <div class="button-container">
+        <a href="/" class="upload-button">Upload Another Image</a>
+    </div>
 </body>
 </html>
